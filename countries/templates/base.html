@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+
+  <style>
+    a {
+      color: #377ba8;
+      text-decoration: none;
+      padding: 1rem;
+    }
+  </style>
+
+  {% block css %}{% endblock %}
+</head>
+
+<nav style="background:rgba(19, 22, 41, 0.384); display: flex; padding: 0 0.5rem;">
+  <h1><a href="{{ url_for('blog.index') }}">Posts</a></h1>
+  <h1><a href="{{ url_for('blog.add_post') }}">Add Post</a></h1>
+  <h1><a href="{{ url_for('blog.add_user') }}">Add User</a></h1>
+  <h1><a href="{{ url_for('blog.users_list') }}">Users</a></h1>
+
+
+</nav>
+
+
+
+  
+{% block content %}{% endblock %}

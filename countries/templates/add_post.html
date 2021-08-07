@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<h1>Add Post</h1>
+
+<form method="POST">
+    {{form.hidden_tag()}}
+
+    <h4>title</h4>
+    {{form.title(class="form-control")}}<br>
+
+    <h4>author</h4>
+    {{ form.author(class="form-control") }}<br>
+
+    <h4>date created</h4>
+    {{ form.date_created(class="form-control")}}<br>
+
+    <h4>whats your username</h4>
+    {{ form.username(class="form-control") }}<br>
+
+    <h4>content</h4>
+    {{ form.content(class="form-control", rows=5) }}<br>
+
+    
+
+    {{ form.submite(class="btn btn-primary") }}
+
+</form>
+{% endblock %}

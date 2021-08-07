@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+countries/__init__.py
+countries/auth.py
+countries/db.py
+countries/info.py
+countries.egg-info/PKG-INFO
+countries.egg-info/SOURCES.txt
+countries.egg-info/dependency_links.txt
+countries.egg-info/not-zip-safe
+countries.egg-info/requires.txt
+countries.egg-info/top_level.txt

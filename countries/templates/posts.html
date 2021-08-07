@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<h1 style="color: blueviolet;">Blog Posts</h1><br>
+
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+{% for post in posts %}
+    <div class="container" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h2> {{post.title}} </h2>
+        by: {{post.author}}<br>
+        at: {{post.date_created}} <br><br>
+        <h3>{{ post.content }} </h3><br>
+        <a href="{{ url_for('blog.delete_post', id=post.id) }}" class="btn btn-danger btn-sm">
+            Delete Post
+        </a>
+    </div><br>
+
+{% endfor %}
+
+{% endblock %}
